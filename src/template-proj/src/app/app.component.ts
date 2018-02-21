@@ -12,5 +12,6 @@ export class AppComponent {
 
   menuToggle() {
     this.isHidden = !this.isHidden;
+    console.log('action here!');
   }
 }
