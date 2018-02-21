@@ -8,6 +8,8 @@ import { RegionModule } from './region/region.module';
 import { FeedModule } from './feed/feed.module';
 import { CountryModule } from './country/country.module';
 import { UserModule } from './user/user.module';
+import { MessageModule } from './message/message.module';
+import { GeneralStatusModule } from './general-status/general-status.module';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { UserModule } from './user/user.module';
     RegionModule,
     FeedModule,
     CountryModule,
-    UserModule
+    UserModule,
+    MessageModule,
+    GeneralStatusModule
   ],
   providers: [],
   bootstrap: [AppComponent]
