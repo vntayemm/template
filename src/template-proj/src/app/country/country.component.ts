@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ValuesService } from '../services/values.service';
 
 @Component({
   selector: 'app-country',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
+  values: string[];
 
-  constructor() { }
+  constructor(private _valueService: ValuesService) { }
 
   ngOnInit() {
+    this._valueService.getValues()
+      .subscribe(rs=>console.log(rs));
   }
 
 }
