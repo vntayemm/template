@@ -11,9 +11,9 @@ namespace template_api_proj.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<DummyData> Get()
         {
-            return new string[] {  "value2", "value2", "value2", "value2", "value2", "value2", "value2", "value2", "value2", "value2", "value2", "value2" };
+            return StaticDatas.DataList;
         }
 
         // GET api/values/5
@@ -40,5 +40,22 @@ namespace template_api_proj.Controllers
         public void Delete(int id)
         {
         }
+    }
+
+    public static class StaticDatas
+    {
+        public static List<DummyData> DataList = new List<DummyData> 
+        { 
+            new DummyData{Id = 1, Value = "value-1"},
+            new DummyData{Id = 2, Value = "value-2"},
+            new DummyData{Id = 3, Value = "value-3"},
+            new DummyData{Id = 4, Value = "value-4"},
+        };
+    }
+
+    public class DummyData
+    {
+        public int Id { get; set; }
+        public string Value { get; set; }
     }
 }

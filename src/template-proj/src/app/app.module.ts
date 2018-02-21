@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ServicesModule } from './services/services.module';
+
 import { AppComponent } from './app.component';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { RegionModule } from './region/region.module';
@@ -9,10 +11,8 @@ import { CountryModule } from './country/country.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './message/message.module';
 import { GeneralStatusModule } from './general-status/general-status.module';
-import { ServicesModule } from './services/services.module';
-
-import { ValuesService } from './services/values.service';
-import { TemplateProjApiService } from './services/template-proj-api.service';
+import { BottombarModule } from './bottombar/bottombar.module';
+import { ModelsModule } from './models/models.module';
 
 
 @NgModule({
@@ -28,7 +28,11 @@ import { TemplateProjApiService } from './services/template-proj-api.service';
     UserModule,
     MessageModule,
     GeneralStatusModule,
-    ServicesModule
+    BottombarModule,
+
+    ServicesModule,
+
+    ModelsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

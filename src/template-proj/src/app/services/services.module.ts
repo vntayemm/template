@@ -8,7 +8,7 @@ import { ValuesService } from './values.service';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule //this library using for api
   ],
   providers: [TemplateProjApiService, ValuesService],
 })
