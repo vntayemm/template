@@ -1,3 +1,6 @@
 src/template-api-proj/obj/
 src/template-api-proj/bin/
 src/template-api-proj/out/
+*.user
+*.suo
+*.vs
