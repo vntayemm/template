@@ -21,7 +21,10 @@
     </div>
     <div class="w3-container w3-third">
       <h5 class="w3-bottombar w3-border-orange">Values</h5>
-      <p *ngFor="let val of values">{{val.value}}</p>
+      <button class="w3-button" (click)="postValue()">
+        <i class="fa fa-plus"></i>
+      </button>
+      <p *ngFor="let val of values">{{val.Value}}</p>
     </div>
   </div>
 </div>
