@@ -26,7 +26,7 @@ namespace template_api_proj.Controllers
         public int Post([FromBody]DummyData model)
         {
             var sources = DataManager.DataList;
-            var newId = sources.Max(p => p.Id) + 1;
+            var newId = sources.Count > 0 ? sources.Max(p => p.Id) + 1 : 1;
 
             model.Id = newId;
             model.Value = $"value-{newId}";
@@ -37,8 +37,11 @@ namespace template_api_proj.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public bool Put(int id, [FromBody]DummyData value)
+        public bool Put(int id, [FromBody]DummyData model)
         {
+            var src = DataManager.DataList.Find(p => p.Id == id);
+            src = model;
+
             return true;
         }
 

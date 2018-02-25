@@ -24,7 +24,20 @@
       <button class="w3-button" (click)="postValue()">
         <i class="fa fa-plus"></i>
       </button>
-      <p *ngFor="let val of values">{{val.Value}}</p>
+      <button class="w3-button" (click)="deleteValue()">
+        <i class="fa fa-remove"></i>
+      </button>
+      <button class="w3-button" (click)="sortValues()">
+        <i class="fa fa-sort"></i>
+      </button>
+      <button class="w3-button" (click)="getValues()">
+        <i class="fa fa-refresh"></i>
+      </button>
+
+      <div *ngFor="let val of values">
+        <div contenteditable="true" (click)="selectedValue=val">{{val.Value}}</div>
+      </div>
+
     </div>
   </div>
 </div>

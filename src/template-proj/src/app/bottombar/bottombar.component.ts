@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { ValuesService } from '../services/values.service';
 import { DummyData } from '../models/dummy-data';
 
@@ -7,15 +7,35 @@ import { DummyData } from '../models/dummy-data';
   templateUrl: './bottombar.component.html',
   styleUrls: ['./bottombar.component.css']
 })
-export class BottombarComponent implements OnInit {
+export class BottombarComponent implements OnInit, OnChanges {
 
   values: DummyData[] = [];
   selectedValue: DummyData;
 
+  private _isDesc = true;
+
   constructor(private _valueService: ValuesService) { }
 
+  //Init
   ngOnInit() {
     this.getValues();
+  }
+
+  //This change
+  ngOnChanges(changes: { [propName: string]: SimpleChange }) {
+    if (changes['values']) {
+      // console.log(this.values);
+    }
+  }
+
+  //Sort
+  sortValues() {
+    if (this._isDesc) {
+      this.values.sort((a, b) => b.Id - a.Id);
+    } else {
+      this.values.sort((a, b) => a.Id - b.Id);
+    }
+    this._isDesc = !this._isDesc;
   }
 
   //Get
@@ -42,7 +62,8 @@ export class BottombarComponent implements OnInit {
   putValue() {
     this._valueService.putValue(this.selectedValue.Id, this.selectedValue)
       .subscribe(success => {
-        if (success) {
+        if (!success) {
+          //Rollback
         }
       });
   }

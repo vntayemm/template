@@ -8,7 +8,7 @@ const httpOptions = {
 
 @Injectable()
 export class TemplateProjApiService {
-  private _apiUri = 'http://127.0.0.1:65342/api';
+  private _apiUri = 'http://localhost:65342/api';
 
   constructor(private _httpClient: HttpClient) {}
 

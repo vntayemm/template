@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+import { appRoutes } from './app.routing';
 import { ServicesModule } from './services/services.module';
 
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { ModelsModule } from './models/models.module';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    
     SidebarModule,
     RegionModule,
     FeedModule,
