@@ -1,5 +1,5 @@
 <div class="w3-bar-block">
-  <a *ngFor="let item of menuItems" href={{item.Href}} [ngClass]="item.Href == this._router.url ? 'w3-bar-item w3-button w3-padding active' : 'w3-bar-item w3-button w3-padding'">
+  <a *ngFor="let item of menuItems" routerLink={{item.Href}} [ngClass]="item.Href == this._router.url ? 'w3-bar-item w3-button w3-padding active' : 'w3-bar-item w3-button w3-padding'">
     <i [ngClass]="item.Class"></i>  {{item.Text}}</a>
   <br>
   <br>

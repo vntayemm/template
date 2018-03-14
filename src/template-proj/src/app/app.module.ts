@@ -23,6 +23,7 @@ import { ModelsModule } from './models/models.module';
   ],
   imports: [
     BrowserModule,
+    // RouterModule,
     RouterModule.forRoot(appRoutes),
     
     SidebarModule,
