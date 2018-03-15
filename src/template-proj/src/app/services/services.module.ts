@@ -13,6 +13,16 @@ import { BlockchainGatewayService } from './blockchain-gateway.service';
 import { DataService } from './data.service';
 import { IdentityService } from './identity.service';
 import { AnalyticsService } from './analytics.service';
+import { BlockchainWalletService } from './blockchain-wallet.service';
+import { PaymentsService } from './payments.service';
+import { ReceivePaymentsService } from './receive-payments.service';
+import { BitcoinPaymentService } from './bitcoin-payment.service';
+import { EthereumPaymentService } from './ethereum-payment.service';
+import { MailService } from './mail.service';
+import { SmsService } from './sms.service';
+import { ChatService } from './chat.service';
+import { VoiceService } from './voice.service';
+import { LivecameService } from './livecame.service';
 
 @NgModule({
   imports: [
@@ -31,6 +41,19 @@ import { AnalyticsService } from './analytics.service';
     DataService,
     IdentityService,
     AnalyticsService,
+
+    BlockchainWalletService,
+    PaymentsService,
+    ReceivePaymentsService,
+    BitcoinPaymentService,
+    EthereumPaymentService,
+
+    MailService,
+    SmsService,
+    ChatService,
+    VoiceService,
+    LivecameService,
+    
   ],
 })
 export class ServicesModule { 
