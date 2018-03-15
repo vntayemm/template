@@ -23,6 +23,9 @@ import { SmsService } from './sms.service';
 import { ChatService } from './chat.service';
 import { VoiceService } from './voice.service';
 import { LivecameService } from './livecame.service';
+import { FacebookService } from './facebook.service';
+import { GoogleService } from './google.service';
+import { LinkedinService } from './linkedin.service';
 
 @NgModule({
   imports: [
@@ -53,6 +56,10 @@ import { LivecameService } from './livecame.service';
     ChatService,
     VoiceService,
     LivecameService,
+
+    FacebookService,
+    GoogleService,
+    LinkedinService,
     
   ],
 })
