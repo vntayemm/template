@@ -15,6 +15,7 @@ import { MessageModule } from './message/message.module';
 import { GeneralStatusModule } from './general-status/general-status.module';
 import { BottombarModule } from './bottombar/bottombar.module';
 import { ModelsModule } from './models/models.module';
+import { OpenidConnectModule } from './openid-connect/openid-connect.module';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import { ModelsModule } from './models/models.module';
 
     ServicesModule,
 
-    ModelsModule
+    ModelsModule,
+    
+    OpenidConnectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
